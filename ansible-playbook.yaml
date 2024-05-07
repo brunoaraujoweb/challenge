@@ -1,0 +1,10 @@
+---
+- hosts: opsHost
+    tasks:
+        - name: Run script daily
+            cron:
+                name: "run script daily"
+                user: "username"
+                minute: "0"
+                hour: "0"
+                job: "/path/script.py"
